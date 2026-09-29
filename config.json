@@ -1,0 +1,36 @@
+{
+    "queries": {
+        "total_orders": {
+            "description": "Find the total number of orders",
+            "operation": "count",
+            "column": "order_id"
+        },
+        "total_sales": {
+            "description": "Find total sales",
+            "operation": "sum",
+            "column": "amount"
+        },
+        "total_quantity": {
+            "description": "Find total quantity sold",
+            "operation": "sum",
+            "column": "qty"
+        },
+        "cancelled_orders": {
+            "description": "Find number of cancelled orders",
+            "operation": "count_cancelled",
+            "column": "status"
+        },
+        "category_sales": {
+            "description": "Find sales by category",
+            "operation": "group_sum",
+            "group_by": "category",
+            "column": "amount"
+        },
+        "state_sales": {
+            "description": "Find sales by state",
+            "operation": "group_sum",
+            "group_by": "ship_state",
+            "column": "amount"
+        }
+    }
+}
